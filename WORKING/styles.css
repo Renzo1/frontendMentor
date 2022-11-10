@@ -1,0 +1,280 @@
+/* General design template */
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+section{
+  padding: 5rem 0;
+}
+
+a{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: black;
+}
+
+h1, h2, h3, p{
+  margin: 1.6rem auto;
+}
+
+h1{
+  font-size: 4.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: #2C3333;
+}
+
+h2{
+  font-size: 3.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2C3333;
+}
+
+h3{
+  font-size: 3.0rem;
+  font-weight: 600;
+}
+
+p{
+  color: #7F8487;
+  font-size: 2.0rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 5rem;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-item: center;
+  margin: auto;
+}
+.row p{
+  width: 60%;
+  text-align: center;
+}
+
+/* Header */
+
+header{
+  background: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .row{
+  justify-content: center;
+}
+
+.top-logo{
+  width: 12rem;
+  padding-top: 10rem;
+}
+
+.page-title{
+  text-align: center;
+  margin-top: 10rem;
+  color: #2C3333;
+}
+
+.row.btn{
+  justify-content: center;
+  width: 50%;
+}
+
+.download-btn{
+  border-radius: 5rem;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  font-family: 'Bai Jamjuree', sans-serif;
+  margin: 3rem 0.75rem;
+  padding: 1.4rem 4rem;
+  box-shadow: -6px 8px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.download-btn.ios{
+  background-color: hsl(171, 66%, 44%);
+}
+.download-btn.mac{
+  background-color: hsl(233, 100%, 69%);
+}
+.download-btn:hover{
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Section 2: Keep track */
+.desktop-image{
+  position: relative;
+  width: 110%;
+  right: 20rem;
+}
+.list-beside-desktop{
+  padding: 0 2rem 0 0;
+}
+.list-item-beside-desktop{
+  margin: 5rem 5rem 5rem 0;
+}
+.list-item-beside-desktop p{
+  text-align: left;
+  width: 100%;
+}
+
+/* Section 3: Access clipboard  */
+.mobile-gadget{
+  align-items: center;
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+
+/* Section 4 workflow */
+.workflow-items{
+  display: flex;
+  flex: 1 1 0; /*grow shrink basis */
+  margin: 1rem;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.client-logo{
+  display: flex;
+  flex: 1 1 0;
+  margin: 3rem;
+}
+.workflow-icons{
+  width: 4rem;
+}
+.row.clients{
+  margin-top: 5rem;
+}
+
+/* Section 5: Clipboard for iOS and Mac OS (refactored) */
+
+/* Footer */
+footer{
+  background-color: #f2f4f7;
+}
+footer .row>*{
+  display: flex;
+  flex: 0 1 auto;
+}
+.bottom-logo{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 7.5rem;
+}
+.bottom-logo-small{
+  width: 6rem;
+}
+.row.footer-links{
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.footer-link{
+  display: flex;
+  width: 15rem;
+  margin: 1.5rem 2.5rem;
+}
+.social-icons{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 20%;
+}
+.socials-logo{
+  margin: 1rem;
+}
+.footer-link:hover{
+  color: hsl(171, 66%, 44%);
+  font-weight: bold;
+}
+.socials:hover{
+  fill: hsl(171, 66%, 44%);
+  transition: ease-in 0.2s all;
+}
+
+/* Media Queries for smaller screens */
+
+@media (max-width:1028px) {
+  .row{
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .row p{
+    width: 100%;
+  }
+
+  /* header */
+  .top-logo{
+    width: 40%;
+    padding-top: 10rem;
+  }
+  .row.btn{
+    width: 100%;
+  }
+  .download-btn{
+  width: 100%;
+  margin: 1rem 0.75rem;
+  padding: 2rem;
+  font-size: 2.4rem;
+  }
+
+  /* Section 2: Keep track */
+  .desktop-image{
+    position: static;
+    width: 100%;
+  }
+  .list-item-beside-desktop h3, .list-item-beside-desktop p{
+    text-align: center;
+  }
+
+  /* Section 4: Supercharge your workflow */
+  .client-logo{
+    width: 40%;
+    margin: 7.5rem 0;
+  }
+
+  /* Section 5: Clipboard for iOS and Mac OS */
+  .clipboard{
+     margin: 10rem
+  }
+
+  /* footer */
+  footer{
+
+  }
+  .footer-link{
+    width: 50%;
+    justify-content: center;
+  }
+  .bottom-logo-small {
+    width: 8rem;
+  }
+  .row.footer-links a{
+    font-size: 2.4rem;
+  }
+  .social-icons{
+    margin: 5rem auto;
+  }
+
+}
